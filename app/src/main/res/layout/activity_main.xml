@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="66dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/digits"
+                android:layout_width="0dp"
+                android:layout_height="66dp"
+                android:layout_weight="1"
+                android:focusableInTouchMode="false"
+                android:freezesText="true"
+                android:inputType="phone"
+                android:paddingLeft="45dp"
+                android:scrollHorizontally="true"
+                android:paddingStart="45dp"
+                android:clickable="false"
+                />
+
+            <Button
+                android:id="@+id/btn_delete"
+                android:layout_width="wrap_content"
+                android:layout_height="66dp"
+                android:text="Clear"
+               android:layout_gravity="center"
+                />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="420dp">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/bg"
+            android:layout_centerInParent="true"
+            />
+        <com.example.circledialerphone.RotaryDialerView
+            android:id="@+id/dialer"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            />
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:background="@drawable/top"
+            />
+
+        <Button
+            android:id="@+id/call_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="Call"
+            />
+
+        <Button
+            android:id="@+id/star_button"
+            style="@style/Widget.AppCompat.Button.Small"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/call_button"
+            android:layout_alignStart="@id/call_button"
+            android:layout_alignLeft="@id/call_button"
+            android:layout_centerInParent="true"
+            android:layout_marginStart="-20dp"
+            android:layout_marginLeft="-20dp"
+            android:layout_marginTop="0dp"
+            android:text="*" />
+
+        <Button
+            android:id="@+id/bars_button"
+            style="@style/Widget.AppCompat.Button.Small"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/call_button"
+            android:layout_alignEnd="@id/call_button"
+            android:layout_alignRight="@id/call_button"
+            android:layout_marginTop="0dp"
+            android:layout_marginEnd="-20dp"
+            android:layout_marginRight="-20dp"
+            android:text="#" />
+    </RelativeLayout>
+</LinearLayout>
+
+
+
